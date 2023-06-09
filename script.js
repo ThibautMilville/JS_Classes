@@ -62,7 +62,7 @@ class Library {
   findBooksByLetter (letter) {
     const result = this.#books.filter(function(book) {
       // Lowercase to avoid to have case problems
-      return book.name.toLowerCase().charAt(0) === letter.toLowerCase();
+      return book.name[0].toLowerCase() === letter.toLowerCase();
     });
     return result;
   }
